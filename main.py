@@ -66,8 +66,8 @@ for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load(
         os.path.join(game_folder, 'imgs/enemy.png')))
     enemyX.append(random.randint(0, 800-64))
-    enemyY.append(20)
-    enemyX_Change.append(2.5)
+    enemyY.append(60)
+    enemyX_Change.append(4)
     enemyY_Change.append(40)
 
 
@@ -125,7 +125,7 @@ while running:
                 playerX_Change += 5
             if event.key == pygame.K_SPACE:
                 if bullet_state == "ready":
-                    bullet_sound = pygame.mixer.Sound('sounds/laser5.wav')
+                    bullet_sound = pygame.mixer.Sound('sounds/laser.wav')
                     bullet_sound.play()
                     # get current x coordinate
                     bulletX = playerX
@@ -173,7 +173,7 @@ while running:
         # Collision
         collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
         if collision:
-            explosion = pygame.mixer.Sound('sounds/boom3.wav')
+            explosion = pygame.mixer.Sound('sounds/explosion.wav')
             explosion.play()
             bulletY = 500
             bullet_state = "ready"
