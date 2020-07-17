@@ -8,7 +8,7 @@ Space invaders game made using pygame framework for a native computer game.
 
 ## How to Play
 
-To play and view the game ensure that `python 3` is installed and install `pygame` with pip or pip3.
+To play and view the game ensure that `python 3` is installed and install `pygame` with pip or pip3. Game speed may need to be adjusted based on the local machine its running on to speed up or slow down locate the game loop and adjust `enemyX_Change` accordingly, currently its set for __2.5__. For example on my windows machine the movement needs to be between __1-2__ on my mac it needs to be __3-4__.
 
 Game controls are simple the left and right arrow buttons for left and right movement space is to fire the weapon.
 
